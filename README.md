@@ -31,7 +31,7 @@ This project works specifically with a dataset describing homes and their final 
 |**House Style**| Style of dwelling | 
 |**Overall Qual**| Rates the overall material and finish of the home |
 |**Overall Cond**| Rates overall condition of the house |
-|**Year Built **| Original constructiond ate |
+|**Year Built**| Original construction date |
 |**Year Remod/Add**| Remodel date (same as construction date if no remodel) | 
 |**Roof Style**| Type of roof |
 |**Roof Matl**| Roof material |
@@ -102,7 +102,7 @@ Over 6 different versions, features were eliminated based on relative relationsh
 Features describing quality or condition with words were changed to express quality on a numerical instead to make this parameter compatible with modeling. The feature for Garage Type was simplified to only indicate whether there was a protected garage present. In this case, a protected garage is considered a garage with full walls and overhead coverage and a door so the vehicle parked within would be completely protected. Carports and absent garages were lumped together since average sales price for both of these categories was very similar and they were both far removed from the other garage types when this trait was graphed. 
 
 ## Modeling 
-This project uses multiple linear regression, scaled linear regression, LASSO regression, and Ridge regression to determine a suitable model for predicting final home sale prices. There were 6 iterations of each of these models for each stage of feature elimination, and in most cases LASSO regression had the best performance. The final model uses LASSO regression, with an $R^2$ training average of 0.842 and an $R^2$ testing average of 0.844. 
+This project uses multiple linear regression, scaled linear regression, LASSO regression, and Ridge regression to determine a suitable model for predicting final home sale prices. There were 6 iterations of each of these models for each stage of feature elimination, and in most cases LASSO regression had the best performance. The final model uses LASSO regression, with an R^2 training average of 0.842 and an R^2 testing average of 0.844. 
 
 ## Recommendations 
 It is recommended that an app be developed to help users determine their own budget for first time home buying. To strike the balance between customizability and appropriate model complexity it is suggested that the model the app is based on includes these parameters: neighborhood, house style, basement condition, kitchen quality, total rooms garage type, pool quality, total square footage, overall condition/quality average, age at sale, and age of remodel at sale. These parameters should be used in a tool where users can customize each of these things (perhaps with some features behind an "advanced" option). 
